@@ -16,7 +16,7 @@ const app = () => {
         <Stack.Screen
           name="Search"
           component={SearchScreen}
-          options={{ title: "Search Screen " }}
+          options={{ title: "Search restaurant " }}
         />
         
         <Stack.Screen name="Details" component={DetailsScreen} />
