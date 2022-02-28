@@ -1,9 +1,10 @@
 import React from "react";
 import { View , Text ,StyleSheet } from "react-native";
+import SearchBar from "../components/searchBar";
 
 const SearchScreen =()=>{
     return <View>
-        <Text> search screen</Text>
+       < SearchBar/>
     </View>
 }
 
