@@ -5,7 +5,7 @@ import yelp from "../api/yelp";
 import useResults from "../hooks/useResults";
 import ResultsList from "../components/resultsList";
 
-const SearchScreen = ({navigation}) => {
+const SearchScreen = ({ navigation }) => {
   //console.log(props.navigation.navigate())
   const [term, setTerm] = useState("");
   const [results, errorMsg, searchApi] = useResults();
@@ -25,9 +25,21 @@ const SearchScreen = ({navigation}) => {
 
       {errorMsg ? <Text> {errorMsg}</Text> : null}
       <ScrollView>
-        <ResultsList results={filterResults("$")}  navigation={navigation}title={"cost effective"} />
-        <ResultsList results={filterResults("$$")} navigation={navigation}  title={"bit pricier"} />
-        <ResultsList results={filterResults("$$$")}  navigation={navigation} title={"big spender"} />
+        <ResultsList
+          results={filterResults("$")}
+          navigation={navigation}
+          title={"cost effective"}
+        />
+        <ResultsList
+          results={filterResults("$$")}
+          navigation={navigation}
+          title={"bit pricier"}
+        />
+        <ResultsList
+          results={filterResults("$$$")}
+          navigation={navigation}
+          title={"big spender"}
+        />
       </ScrollView>
     </View>
   );
@@ -36,7 +48,7 @@ const SearchScreen = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    borderColor : "red",
+    borderColor: "red",
     borderWidth: 3,
   },
 });

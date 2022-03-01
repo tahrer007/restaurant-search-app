@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import ResultsDetails from "./resultDetails";
 
+
 const ResultsList = ({ title, results, navigation }) => {
   return (
     <View style={styles.container}>
@@ -19,7 +20,11 @@ const ResultsList = ({ title, results, navigation }) => {
         keyExtractor={(results) => results.id}
         renderItem={({ item }) => {
           return (
-            <TouchableOpacity onPress={()=>navigation.navigate("Details")}>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate("Details",{id:item.id});
+              }}
+            >
               <ResultsDetails result={item} />
             </TouchableOpacity>
           );
