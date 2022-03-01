@@ -1,13 +1,16 @@
 import React from "react";
-import { View, Text, StyleSheet ,TextInput } from "react-native";
-import { Ionicons } from '@expo/vector-icons'; 
-
+import { View, Text, StyleSheet, TextInput } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
 const SearchBar = () => {
   return (
-    <View style ={styles.backGround}>
-        <Ionicons name="search-circle-sharp" style={styles.iconStyle} color="black" />
-      <TextInput style = {styles.inputStyle} placeholder = "search ....."/>
+    <View style={styles.backGround}>
+      <Ionicons
+        name="search-circle-sharp"
+        style={styles.iconStyle}
+        color="black"
+      />
+      <TextInput style={styles.inputStyle} placeholder="search ....." />
     </View>
   );
 };
@@ -17,20 +20,15 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 5,
     marginHorizontal: 15,
-    flexDirection : "row" ,
-    
-    
-   
+    flexDirection: "row",
   },
   inputStyle: {
-    borderColor : "black" , 
-    borderWidth:1 ,
-    flex:1
-},
-iconStyle :{
-        fontSize:35 , 
-        alignSelf :"center"
-}
-  
+    
+    flex: 1,
+  },
+  iconStyle: {
+    fontSize: 35,
+    alignSelf: "center",
+  },
 });
 export default SearchBar;
