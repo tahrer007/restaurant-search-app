@@ -14,7 +14,8 @@ const ResultsDetails = ({ result }) => {
 };
 const styles = StyleSheet.create({
   container: {
-    marginLeft: 10,
+    marginLeft: 15,
+    marginBottom:5,
   },
 
   title: {
