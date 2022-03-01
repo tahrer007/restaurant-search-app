@@ -25,15 +25,15 @@ const SearchScreen = () => {
       <Text> {results.length}</Text>
       {errorMsg ? <Text> {errorMsg}</Text> : null}
       <ResultsList
-        filteredResults={filterResults("$")}
+        results={filterResults("$")}
         title={"cost effective"}
       />
       <ResultsList
-        filteredResults={filterResults("$$")}
+        results={filterResults("$$")}
         title={"bit pricier"}
       />
       <ResultsList
-        filteredResults={filterResults("$$$")}
+        results={filterResults("$$$")}
         title={"big spender"}
       />
     </View>
